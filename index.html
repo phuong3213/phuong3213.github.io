@@ -3,152 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giới Thiệu Phương</title>
-    <style>
-        /* Tổng quan */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background: #f4f7f6;
-            color: #333;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            overflow: hidden; /* Để tránh tuyết rơi bị kéo dài */
-        }
-        
-        /* Header */
-        header {
-            width: 100%;
-            background-color: #2b2b2b;
-            color: white;
-            padding: 2em 0;
-            text-align: center;
-        }
-        
-        header h1 {
-            font-size: 2.5em;
-            margin: 0;
-        }
-        
-        header p {
-            font-size: 1.2em;
-        }
-        
-        /* Main Content */
-        main {
-            width: 80%;
-            max-width: 1000px;
-            margin-top: 2em;
-            text-align: center;
-        }
-
-        section {
-            margin: 2em 0;
-            padding: 1em;
-            background: #fff;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            border-radius: 8px;
-        }
-        
-        section h2 {
-            color: #2b2b2b;
-        }
-
-        /* Snowflake Style */
-        .snowflake {
-            position: fixed;
-            top: -10px;
-            color: white;
-            font-size: 1em;
-            opacity: 0.9;
-            pointer-events: none;
-            animation: fall linear infinite;
-        }
-
-        @keyframes fall {
-            to {
-                transform: translateY(100vh);
-            }
-        }
-
-        /* Random animation delays and speeds */
-        @keyframes sway {
-            0%, 100% { transform: translateX(0); }
-            50% { transform: translateX(20px); }
-        }
-
-        /* Contact Section */
-        footer {
-            margin-top: 2em;
-            padding: 1em;
-            background-color: #2b2b2b;
-            color: white;
-            width: 100%;
-            text-align: center;
-        }
-
-        footer a {
-            color: #4ba3c7;
-            text-decoration: none;
-        }
-
-    </style>
+    <title>Trang hồ sơ của bạn</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <!-- Snowflakes Container -->
+    <!-- Hiệu ứng tuyết rơi -->
     <div id="snow-container"></div>
 
-    <!-- Header -->
-    <header>
-        <h1>Xin chào, tôi là Phương!</h1>
-        <p>Học sinh và đang học lập trình đến từ Hà Nội | Đam mê tạo ra những sản phẩm sáng tạo</p>
-    </header>
+    <!-- Thẻ chứa hồ sơ -->
+    <div class="profile-card">
+        <img class="profile-image" src="path/to/your-image.jpg" alt="Profile Picture">
+        <h2>Nguyễn Đức Phương <span class="verified">✔️</span></h2>
+        <p class="description">
+            Tôi là Nguyễn Minh Hiếu, một học sinh cấp 2 với ước mơ trở thành một Lập Trình Viên
+        </p>
+        <p class="location">📍 Hoà Thạch</p>
 
-    <!-- Main Content -->
-    <main>
-        <!-- About Me Section -->
-        <section>
-            <h2>Giới thiệu</h2>
-            <p>Tôi là Phương, hiện đang theo đuổi con đường lập trình với nhiều dự án đa dạng từ game cho đến các ứng dụng web hiện đại.</p>
-        </section>
-        
-        <!-- Skills Section -->
-        <section>
-            <h2>Kỹ Năng</h2>
-            <p>Lập trình C++, JavaScript, HTML, CSS | Xây dựng game và ứng dụng web</p>
-        </section>
-        
-        <!-- Projects Section -->
-        <section>
-            <h2>Dự Án</h2>
-            <p>Dự án 1: <a href="#">Xem chi tiết</a></p>
-            <p>Dự án 2: <a href="#">Xem chi tiết</a></p>
-        </section>
-    </main>
+        <!-- Thông tin số liệu -->
+        <div class="stats">
+            <div><strong>1,236,889</strong><br>Followers</div>
+            <div><strong>1</strong><br>Following</div>
+            <div><strong>68</strong><br>Posts</div>
+            <div><strong>3</strong><br>Works</div>
+        </div>
 
-    <!-- Contact -->
-    <footer>
-        <p>Liên hệ: <a href="mailto:nguyenphuong2321412@gmail.com">nguyenphuong2321412@gmail.com</a></p>
-    </footer>
+        <!-- Nút liên hệ -->
+        <div class="buttons">
+            <button class="message-btn">Message</button>
+            <button class="follow-btn">Follow</button>
+        </div>
+    </div>
 
-    <!-- Snowfall Effect Script -->
-    <script>
-        const snowContainer = document.getElementById('snow-container');
-        const snowflakeCount = 100; // Số lượng bông tuyết
-
-        for (let i = 0; i < snowflakeCount; i++) {
-            const snowflake = document.createElement('div');
-            snowflake.classList.add('snowflake');
-            snowflake.innerHTML = '❄️';
-            snowflake.style.left = Math.random() * 100 + 'vw';
-            snowflake.style.animationDuration = (Math.random() * 5 + 5) + 's';
-            snowflake.style.fontSize = (Math.random() * 15 + 10) + 'px';
-            snowflake.style.animationDelay = Math.random() * 5 + 's';
-            snowContainer.appendChild(snowflake);
-        }
-    </script>
-
+    <!-- Hiệu ứng tuyết rơi -->
+    <script src="snow.js"></script>
 </body>
 </html>
