@@ -14,6 +14,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            overflow: hidden; /* Để tránh tuyết rơi bị kéo dài */
         }
         
         /* Header */
@@ -54,6 +55,29 @@
             color: #2b2b2b;
         }
 
+        /* Snowflake Style */
+        .snowflake {
+            position: fixed;
+            top: -10px;
+            color: white;
+            font-size: 1em;
+            opacity: 0.9;
+            pointer-events: none;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(100vh);
+            }
+        }
+
+        /* Random animation delays and speeds */
+        @keyframes sway {
+            0%, 100% { transform: translateX(0); }
+            50% { transform: translateX(20px); }
+        }
+
         /* Contact Section */
         footer {
             margin-top: 2em;
@@ -73,10 +97,13 @@
 </head>
 <body>
 
+    <!-- Snowflakes Container -->
+    <div id="snow-container"></div>
+
     <!-- Header -->
     <header>
         <h1>Xin chào, tôi là Phương!</h1>
-        <p>học sinh và đang học lập trình đến từ Hà Nội | Đam mê tạo ra những sản phẩm sáng tạo</p>
+        <p>Lập trình viên từ Hà Nội | Đam mê tạo ra những sản phẩm sáng tạo</p>
     </header>
 
     <!-- Main Content -->
@@ -103,7 +130,25 @@
 
     <!-- Contact -->
     <footer>
-        <p>Liên hệ: <a href="mailto:nguyenphuong231412@gmail.com">nguyenphuong231412@gmail.com</a></p>
+        <p>Liên hệ: <a href="mailto:emailcuaban@example.com">emailcuaban@example.com</a></p>
     </footer>
+
+    <!-- Snowfall Effect Script -->
+    <script>
+        const snowContainer = document.getElementById('snow-container');
+        const snowflakeCount = 100; // Số lượng bông tuyết
+
+        for (let i = 0; i < snowflakeCount; i++) {
+            const snowflake = document.createElement('div');
+            snowflake.classList.add('snowflake');
+            snowflake.innerHTML = '❄️';
+            snowflake.style.left = Math.random() * 100 + 'vw';
+            snowflake.style.animationDuration = (Math.random() * 5 + 5) + 's';
+            snowflake.style.fontSize = (Math.random() * 15 + 10) + 'px';
+            snowflake.style.animationDelay = Math.random() * 5 + 's';
+            snowContainer.appendChild(snowflake);
+        }
+    </script>
+
 </body>
 </html>
