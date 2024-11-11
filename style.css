@@ -1,0 +1,93 @@
+/* Đặt nền gradient */
+body {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #6e45e2, #88d3ce);
+    font-family: Arial, sans-serif;
+    color: #333;
+    overflow: hidden;
+}
+
+.profile-card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.profile-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-top: -40px;
+    border: 3px solid white;
+}
+
+h2 {
+    margin: 10px 0 5px;
+    font-size: 1.5em;
+    color: #555;
+}
+
+.verified {
+    color: #0095f6;
+    font-size: 0.8em;
+}
+
+.description {
+    font-size: 0.9em;
+    color: #777;
+    padding: 0 10px;
+}
+
+.location {
+    color: #888;
+    font-size: 0.85em;
+    margin-top: 10px;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin: 15px 0;
+}
+
+.stats div {
+    text-align: center;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.stats strong {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.message-btn, .follow-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.message-btn {
+    background-color: #0095f6;
+    color: white;
+}
+
+.follow-btn {
+    background-color: #ff5a5f;
+    color: white;
+}
