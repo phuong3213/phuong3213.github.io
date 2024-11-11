@@ -3,20 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang Giới Thiệu</title>
+    <title>Giới Thiệu Phương</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; text-align: center; }
-        header { background: #333; color: #fff; padding: 20px 0; }
-        main { padding: 20px; }
+        /* Tổng quan */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f4f7f6;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        /* Header */
+        header {
+            width: 100%;
+            background-color: #2b2b2b;
+            color: white;
+            padding: 2em 0;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        
+        header p {
+            font-size: 1.2em;
+        }
+        
+        /* Main Content */
+        main {
+            width: 80%;
+            max-width: 1000px;
+            margin-top: 2em;
+            text-align: center;
+        }
+
+        section {
+            margin: 2em 0;
+            padding: 1em;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        
+        section h2 {
+            color: #2b2b2b;
+        }
+
+        /* Contact Section */
+        footer {
+            margin-top: 2em;
+            padding: 1em;
+            background-color: #2b2b2b;
+            color: white;
+            width: 100%;
+            text-align: center;
+        }
+
+        footer a {
+            color: #4ba3c7;
+            text-decoration: none;
+        }
+
     </style>
 </head>
 <body>
+
+    <!-- Header -->
     <header>
         <h1>Xin chào, tôi là Phương!</h1>
+        <p>học sinh và đang học lập trình đến từ Hà Nội | Đam mê tạo ra những sản phẩm sáng tạo</p>
     </header>
+
+    <!-- Main Content -->
     <main>
-        <p>Tôi là một học sinh từ Hà Nội, và đây là trang giới thiệu của tôi.</p>
-        <p>Liên hệ: <a href="mailto:nguyenphuong231412@gmail.com">nguyenphuong231412@gmail.com</a></p>
+        <!-- About Me Section -->
+        <section>
+            <h2>Giới thiệu</h2>
+            <p>Tôi là Phương, hiện đang theo đuổi con đường lập trình với nhiều dự án đa dạng từ game cho đến các ứng dụng web hiện đại.</p>
+        </section>
+        
+        <!-- Skills Section -->
+        <section>
+            <h2>Kỹ Năng</h2>
+            <p>Lập trình C++, JavaScript, HTML, CSS | Xây dựng game và ứng dụng web</p>
+        </section>
+        
+        <!-- Projects Section -->
+        <section>
+            <h2>Dự Án</h2>
+            <p>Dự án 1: <a href="#">Xem chi tiết</a></p>
+            <p>Dự án 2: <a href="#">Xem chi tiết</a></p>
+        </section>
     </main>
+
+    <!-- Contact -->
+    <footer>
+        <p>Liên hệ: <a href="mailto:nguyenphuong231412@gmail.com">nguyenphuong231412@gmail.com</a></p>
+    </footer>
 </body>
 </html>
